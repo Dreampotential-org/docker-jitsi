@@ -12,6 +12,7 @@ services:
             - ${CONFIG}/web:/config:Z
             - ${CONFIG}/web/crontabs:/var/spool/cron/crontabs:Z
             - ${CONFIG}/transcripts:/usr/share/jitsi-meet/transcripts:Z
+            - ${CONFIG}/web/conference-base:/usr/share/jitsi-meet
         environment:
             - AMPLITUDE_ID
             - ANALYTICS_SCRIPT_URLS
