@@ -21,3 +21,8 @@ If you plan to install the jitsi-meet stack on a Kubernetes cluster you can find
 * Support container replicas (where applicable).
 * TURN server.
 
+## Enironments to update
+* PUBLIC_URL
+* DOCKER_HOST_ADDRESS
+* LETSENCRYPT_DOMAIN
+* LETSENCRYPT_EMAIL
