@@ -35,5 +35,5 @@ repos_setup() {
 
 remove_containers
 dependency_setup
-# docker-compose -f docker-compose.yml -f jibri.yml up -d
+docker-compose -f docker-compose.yml -f jibri.yml up -d
 repos_setup
