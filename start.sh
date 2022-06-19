@@ -27,6 +27,7 @@ repos_setup() {
         fi
         cd $CONFERENCE_CLONE_PATH/conference-base
         git checkout master
+        cp interface_config.js $CONFERENCE_CLONE_PATH
     else
         echo -e $'\e[91mssh keys not present please create and add to github\e[0m'
     fi
@@ -34,5 +35,5 @@ repos_setup() {
 
 remove_containers
 dependency_setup
-docker-compose -f docker-compose.yml -f jibri.yml up -d
+# docker-compose -f docker-compose.yml -f jibri.yml up -d
 repos_setup
