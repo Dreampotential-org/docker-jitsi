@@ -1,6 +1,7 @@
 #!/bin/bash
 CONFIG_FOLDER=$HOME/.jitsi-meet-cfg
 CONFERENCE_CLONE_PATH=$CONFIG_FOLDER/web
+DOCKER_JITSI_FOLDER=$HOME/docker-jitsi
 
 remove_containers() {
     docker-compose down --remove-orphans
@@ -35,5 +36,6 @@ repos_setup() {
 
 remove_containers
 dependency_setup
-docker-compose -f docker-compose.yml -f jibri.yml up -d
 repos_setup
+cd $DOCKER_JITSI_FOLDER
+docker-compose -f docker-compose.yml -f jibri.yml up -d
