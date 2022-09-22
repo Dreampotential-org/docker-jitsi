@@ -19,7 +19,7 @@ repos_setup() {
     testssh=$(ls -lah ~/.ssh)
     if [ $? -eq 0 ]; then
         echo -e $'\e[91mssh keys present\e[0m'
-        cd $CONFERENCE_CLONE_PATH && git clone git@github.com:aaronorosen/conference-base.git
+        cd $CONFERENCE_CLONE_PATH && git clone git@gitlab.com:devs176/conference-base.git
         if [ $? -eq 0 ]; then
             echo OK! Cool.
         else
