@@ -2,7 +2,8 @@ version: '3'
 
 services:
     jibri:
-        image: jitsi/jibri:latest
+        build: jibri/
+          # image: jitsi/jibri:latest
         restart: ${RESTART_POLICY}
         volumes:
             - ${CONFIG}/jibri:/config:Z

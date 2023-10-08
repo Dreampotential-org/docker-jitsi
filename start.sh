@@ -4,7 +4,7 @@ CONFERENCE_CLONE_PATH=$CONFIG_FOLDER/web
 DOCKER_JITSI_FOLDER=$HOME/docker-jitsi
 
 remove_containers() {
-    docker-compose down --remove-orphans
+    sudo docker-compose down 
     rm -rf $CONFIG_FOLDER
 }
 
@@ -19,7 +19,7 @@ repos_setup() {
     testssh=$(ls -lah ~/.ssh)
     if [ $? -eq 0 ]; then
         echo -e $'\e[91mssh keys present\e[0m'
-        cd $CONFERENCE_CLONE_PATH && git clone git@gitlab.com:devs176/conference-base.git
+        cd $CONFERENCE_CLONE_PATH && git clone git@github.com:Dreampotential-org/conference-base.git
         if [ $? -eq 0 ]; then
             echo OK! Cool.
         else
@@ -37,6 +37,6 @@ remove_containers
 dependency_setup
 repos_setup
 cd $DOCKER_JITSI_FOLDER
-docker-compose -f docker-compose.yml -f jibri.yml up -d
+sudo docker-compose -f docker-compose.yml -f jibri.yml up -d
 cd $CONFERENCE_CLONE_PATH/conference-base
 cp interface_config.js $CONFERENCE_CLONE_PATH
