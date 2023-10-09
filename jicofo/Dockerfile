@@ -1,6 +1,7 @@
 ARG JITSI_REPO=jitsi
 ARG BASE_TAG=latest
-FROM ${JITSI_REPO}/base-java:${BASE_TAG}
+#FROM ${JITSI_REPO}/base-java:${BASE_TAG}
+FROM ${JITSI_REPO}/base-java
 
 LABEL org.opencontainers.image.title="Jitsi Conference Focus (jicofo)"
 LABEL org.opencontainers.image.description="Server-side focus component that manages media sessions and acts as load balancer."

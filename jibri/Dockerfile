@@ -1,6 +1,7 @@
 ARG JITSI_REPO=jitsi
 ARG BASE_TAG=latest
-FROM ${JITSI_REPO}/base-java:${BASE_TAG}
+# FROM ${JITSI_REPO}/base-java:${BASE_TAG}
+FROM ${JITSI_REPO}/base-java
 
 LABEL org.opencontainers.image.title="Jitsi Broadcasting Infrastructure (jibri)"
 LABEL org.opencontainers.image.description="Components for recording and/or streaming a conference."

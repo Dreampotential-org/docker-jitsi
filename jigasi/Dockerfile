@@ -1,6 +1,7 @@
 ARG JITSI_REPO=jitsi
 ARG BASE_TAG=latest
-FROM ${JITSI_REPO}/base:${BASE_TAG}
+# FROM ${JITSI_REPO}/base:${BASE_TAG}
+FROM ${JITSI_REPO}/base
 
 LABEL org.opencontainers.image.title="Jitsi Gateway to SIP (jigasi)"
 LABEL org.opencontainers.image.description="Server-side application that allows regular SIP clients to join conferences."
